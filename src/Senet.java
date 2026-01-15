@@ -1,7 +1,4 @@
-import structure.ColorType;
-import structure.GameState;
-import structure.Stone;
-import structure.SpecialSquares;
+import structure.*;
 
 public class Senet {
 
@@ -9,7 +6,12 @@ public class Senet {
         GameState state = new GameState();
         Senet senetGame = new Senet();
         senetGame.getInitState(state);
-        senetGame.printBoard(state);
+        //senetGame.printBoard(state);
+        PlayGame game = new PlayGame();
+        game.start(state);
+
+        // 5. نهاية
+        System.out.println("=== GAME OVER ===");
 
     }
 
