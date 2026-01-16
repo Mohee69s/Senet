@@ -88,6 +88,9 @@ public class MoveLogic {
             // نحط الحجر الآخر بمكان الحجر المتحرك
             state.board.stones[oldPos] = target;
             target.position = oldPos;
+            
+            // IMPORTANT: Return here to prevent overwriting the swap!
+            return;
         }
 
         // =========================
@@ -98,18 +101,6 @@ public class MoveLogic {
         stone.position = newPos;
         state.board.stones[newPos] = stone;
     }
-
-    // // =========================
-    // // البلاطات الخاصة
-    // // =========================
-    // private static void applySpecialSquare(
-    // GameState state, Stone stone, int steps) {
-    // switch (stone.position) {
-    // case SpecialSquares.water: // 27
-    // moveStoneToReBirth(state, stone);
-    // break;
-    // }
-    // }
 
     // =========================
     // إخراج حجر
