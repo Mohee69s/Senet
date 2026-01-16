@@ -1,5 +1,6 @@
 import structure.GameState;
 import structure.PlayGame;
+import structure.AIVsAI;
 
 public class Main {
 
@@ -16,7 +17,9 @@ public class Main {
         System.out.println("=== GAME START ===");
         senet.printBoard(state);
 
-        // 4. تشغيل اللعبة
+        // 4. تشغيل اللعبة (AI vs AI)
+        AIVsAI ai = new AIVsAI();
+        ai.start(state);
 
     }
 }
